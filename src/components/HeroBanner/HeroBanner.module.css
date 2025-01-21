@@ -1,0 +1,373 @@
+/* Base Hero Banner Structure */
+.heroBanner {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0A2647 0%, #144272 50%, #205295 100%);
+  }
+  
+  .heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: clamp(1rem, 5vw, 2rem);
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .content {
+    display: grid;
+    grid-template-columns: minmax(300px, 380px) 1fr;
+    gap: clamp(2rem, 4vw, 4rem);
+    width: 100%;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  
+  /* Profile Section Styles */
+  .leftColumn {
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+  }
+  
+  .profileSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .imageContainer {
+    width: min(280px, 90vw);
+    height: min(280px, 90vw);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.2),
+      0 0 0 4px rgba(255, 255, 255, 0.1);
+    transform: perspective(1000px) rotateY(-5deg);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .imageContainer:hover {
+    transform: perspective(1000px) rotateY(0deg);
+    box-shadow: 
+      0 25px 50px rgba(0, 0, 0, 0.25),
+      0 0 0 4px rgba(255, 255, 255, 0.2);
+  }
+  
+  .profileImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .credentialsBadge {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .credentialsBadge:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .credentialsIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .credentialsBadge span {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 0.925rem;
+    white-space: normal;
+    text-align: left;
+  }
+
+  /* Right Column Content */
+.rightColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .textContent {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+  }
+  
+  .title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  
+  /* Enhanced Role Section */
+  .roleContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+    margin: 0.5rem 0;
+  }
+  
+  .roleCard {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: all 0.3s ease;
+  }
+  
+  .roleCard:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .roleCard:hover .roleBackground {
+    opacity: 0.15;
+    transform: scale(1.1);
+  }
+  
+  .role {
+    position: relative;
+    z-index: 2;
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.95);
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+  }
+  
+  .roleBackground {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent);
+    opacity: 0.1;
+    transition: all 0.3s ease;
+  }
+  
+  .description {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+  }
+  
+  /* Action Buttons */
+  .actionContainer {
+    display: flex;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    align-items: center;
+  }
+  
+  .primaryButton {
+    background: rgba(255, 255, 255, 0.95);
+    color: #0A2647;
+    padding: 1rem 2.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .primaryButton:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .secondaryButton {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 1rem 2.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .secondaryButton:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+  }
+  
+  /* Professional Links */
+  .professionalLinks {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .professionalLink {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+  }
+  
+  .professionalLink:hover {
+    color: #ffffff;
+    transform: translateX(5px);
+  }
+  
+  /* Enhanced Responsive Design */
+  @media (max-width: 1200px) {
+    .content {
+      gap: 2.5rem;
+    }
+    
+    .title {
+      font-size: 2.75rem;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .container {
+      padding: 2rem 1.5rem;
+    }
+    
+    .content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      text-align: center;
+    }
+    
+    .leftColumn {
+      position: relative;
+      top: 0;
+    }
+    
+    .rightColumn {
+      margin: 0 auto;
+    }
+    
+    .actionContainer {
+      justify-content: center;
+    }
+    
+    .professionalLinks {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .roleContainer {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 1.5rem 1rem;
+    }
+    
+    .title {
+      font-size: 2.25rem;
+    }
+    
+    .description {
+      font-size: 1rem;
+    }
+    
+    .actionContainer {
+      flex-direction: column;
+      width: 100%;
+      gap: 1rem;
+    }
+    
+    .primaryButton,
+    .secondaryButton {
+      width: 100%;
+      padding: 0.875rem 1.5rem;
+    }
+    
+    .professionalLinks {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .credentialsBadge {
+      padding: 0.75rem 1rem;
+      font-size: 0.875rem;
+    }
+    
+    .credentialsBadge span {
+      font-size: 0.875rem;
+    }
+  }
+  
+  /* iPhone SE and similar small devices */
+  @media (max-width: 375px) {
+    .title {
+      font-size: 2rem;
+    }
+    
+    .role {
+      font-size: 1rem;
+      padding: 1rem;
+    }
+    
+    .imageContainer {
+      width: min(240px, 90vw);
+      height: min(240px, 90vw);
+    }
+  }

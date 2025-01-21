@@ -1,0 +1,134 @@
+.expertiseSection {
+    padding: 5rem 2rem;
+    background: linear-gradient(180deg, var(--ifm-background-surface-color) 0%, var(--ifm-background-color) 100%);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .sectionHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-lighter) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .sectionDescription {
+    font-size: 1.25rem;
+    color: var(--ifm-font-color-base);
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.8;
+  }
+  
+  .categorySection {
+    margin-bottom: 4rem;
+  }
+  
+  .categoryTitle {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--ifm-font-color-base);
+    text-align: center;
+  }
+  
+  .expertiseGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .expertiseCard {
+    background: var(--ifm-background-surface-color);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid var(--ifm-color-emphasis-200);
+  }
+  
+  .expertiseCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-color: var(--ifm-color-primary-lighter);
+  }
+  
+  .cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .iconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--ifm-color-primary-dark) 0%, var(--ifm-color-primary) 100%);
+  }
+  
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: white;
+  }
+  
+  .cardTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--ifm-font-color-base);
+  }
+  
+  .cardDescription {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--ifm-font-color-base);
+    opacity: 0.8;
+    margin: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .expertiseGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .expertiseSection {
+      padding: 3rem 1.5rem;
+    }
+  
+    .sectionTitle {
+      font-size: 2rem;
+    }
+  
+    .sectionDescription {
+      font-size: 1.125rem;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .expertiseGrid {
+      grid-template-columns: 1fr;
+    }
+  
+    .expertiseCard {
+      padding: 1.5rem;
+    }
+  }

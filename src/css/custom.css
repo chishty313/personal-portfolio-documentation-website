@@ -1,0 +1,119 @@
+/**
+ * Refined color scheme for professional portfolio
+ * Light theme: Rich deep blue with pristine white
+ * Dark theme: Deep indigo with selective golden accents
+ */
+
+ :root {
+  /* Primary colors for light theme */
+  --ifm-color-primary: #2b4c85;
+  --ifm-color-primary-dark: #274377;
+  --ifm-color-primary-darker: #253f71;
+  --ifm-color-primary-darkest: #1e345c;
+  --ifm-color-primary-light: #2f5493;
+  --ifm-color-primary-lighter: #315899;
+  --ifm-color-primary-lightest: #3863ae;
+  
+  /* Enhanced background and text colors */
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #f8fafc;
+  --ifm-font-color-base: #1a2942;
+  
+  /* Professional accent colors */
+  --custom-accent-100: #f1f5f9;
+  --custom-accent-200: #e2e8f0;
+  --custom-accent-300: #cbd5e1;
+  --custom-accent-400: #94a3b8;
+  --custom-accent-500: #64748b;
+  --custom-accent-600: #475569;
+  
+  /* Enhanced contrast colors */
+  --custom-text-primary: #1a2942;
+  --custom-text-secondary: #334155;
+  --custom-text-muted: #64748b;
+  --custom-border-color: #e2e8f0;
+}
+
+[data-theme='dark'] {
+  /* Primary colors for dark theme */
+  --ifm-color-primary: #c3a455;
+  --ifm-color-primary-dark: #b79544;
+  --ifm-color-primary-darker: #ad8d41;
+  --ifm-color-primary-darkest: #8f7435;
+  --ifm-color-primary-light: #c9ae69;
+  --ifm-color-primary-lighter: #ccb374;
+  --ifm-color-primary-lightest: #d7c290;
+  
+  /* Enhanced dark theme backgrounds */
+  --ifm-background-color: #0f1729;
+  --ifm-background-surface-color: #1a2942;
+  --ifm-font-color-base: #e2e8f0;
+  
+  /* Dark theme accent colors */
+  --custom-accent-100: #1e293b;
+  --custom-accent-200: #334155;
+  --custom-accent-300: #475569;
+  --custom-accent-400: #64748b;
+  --custom-accent-500: #94a3b8;
+  --custom-accent-600: #cbd5e1;
+  
+  /* Enhanced dark theme contrast colors */
+  --custom-text-primary: #f8fafc;
+  --custom-text-secondary: #e2e8f0;
+  --custom-text-muted: #94a3b8;
+  --custom-border-color: #334155;
+}
+
+/* Typography enhancements */
+:root {
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-font-family-heading: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-heading-font-weight: 600;
+  --ifm-font-weight-semibold: 600;
+  
+  /* Enhanced line heights */
+  --ifm-line-height-base: 1.6;
+  --ifm-heading-line-height: 1.3;
+}
+
+/* Global component styling */
+.navbar {
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--custom-border-color);
+}
+
+.footer {
+  --ifm-footer-background-color: var(--ifm-background-surface-color);
+  --ifm-footer-color: var(--custom-text-secondary);
+  border-top: 1px solid var(--custom-border-color);
+}
+
+/* Animation utilities */
+.hover-lift {
+  transition: transform 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* Enhanced card styling */
+.card {
+  border: 1px solid var(--custom-border-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -2px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+/* Global button styling */
+.button {
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  transition: all 0.2s ease;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
